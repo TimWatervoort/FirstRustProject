@@ -16,10 +16,6 @@ fn main() {
 
     println!("Displaying {} champions", results.len());
     for champion in results {
-        println!("{}", champion.name);
-        println!("----------\n");
-        println!("{}", champion.role);
-        println!("----------\n");
-        println!("{}", champion.comfort);
+        println!("{} {}: {}", champion.name, champion.role, champion.comfort);
     }
 }
