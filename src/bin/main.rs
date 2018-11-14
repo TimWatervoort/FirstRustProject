@@ -73,8 +73,6 @@ fn put_champion(id:i32, new_name:String, new_role:String, new_comfort:String) ->
 
     let champion = diesel::update(champions.find(id))
         .set(comfort.eq(new_comfort))
-        // .set(name.eq(new_name))
-        // .set(role.eq(new_role))
         .get_result::<Champion>(&connection)
         .expect(&format!("Unable to find champion {}", id));
 
